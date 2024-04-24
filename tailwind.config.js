@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        playfairDisplay: ['"Playfair Display"']
+        openSans: ['"Open Sans"'],
+        ptSans: ['"PT Sans"'],
       }
     },
   },

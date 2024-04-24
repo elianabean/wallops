@@ -1,46 +1,61 @@
-import { useState } from 'react'
-import background from './background.jpg'
-import PhotoAlbum from "react-photo-album";
-import photos from "./photos";
-
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-
-// import optional lightbox plugins
-import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
+import background from './assets/background.jpg'
+import NavBar from "./components/NavBar";
+import DunesPage from "./pages/dunes";
+import peaks from './assets/peaks.png';
 
 function App() {
-  const [index, setIndex] = useState(-1);
-
   return (
-    <div className="overflow-x-hidden h-[100vh]"
-    style={{ 
-      backgroundImage: `url(${background})`,
-      backgroundSize: 'cover',
-    }}>
-      <h2 className="text-center h-full flex flex-col justify-center font-playfairDisplay text-white text-8xl">Wallops Island</h2>
+    <div className="h-full">
+      <div className="overflow-x-hidden h-[100vh] w-[100vw] relative"
+      style={{ 
+        backgroundImage: `url(${background})`,
+        backgroundSize: 'cover',
+      }}>
+        <NavBar></NavBar>
+        <div className="h-[100vh] flex flex-col justify-center text-white text-center">
+          <h2 className="text-8xl font-openSans font-extrabold mb-6">Wallops Island</h2>
+          <h6 className="text-2xl font-ptSans">MBHS Class of 2026</h6>
+        </div>
+      </div>
 
-      <div className="h-full px-10 flex flex-col justify-center">
-        <PhotoAlbum photos={photos} layout="rows" padding={(containerWidth) => {
-          if (containerWidth < 768) return 2; //md
-          if (containerWidth < 1024) return 5; //lg
-          if (containerWidth < 1280) return 3; //xl
-          return 5; //2xl
-        }}
-        targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
+      <div className="h-full flex flex-col justify-center px-20 mt-10">
+        <h1 className="w-full text-center font-bold font-openSans mb-10 text-3xl">Activities</h1>
+        <div className="flex flex-col justify-between space-y-8">
+          <div className="w-full flex flex-row justify-around">
+              <div className="">
+                <a href=""><img src={peaks} className="w-[36rem] h-[32rem]"></img></a>
+                <p className="font-ptSans w-full text-center mt-3 text-base">Dunes</p>
+              </div>
+              <div>
+                <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+                <p className="font-ptSans w-full text-center mt-3 text-base">Boat</p>
+              </div>
+          </div>
 
-        <Lightbox
-        slides={photos}
-        open={index >= 0}
-        index={index}
-        close={() => setIndex(-1)}
-        // enable optional lightbox plugins
-        plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
-      />
+          <div className="w-full flex flex-row justify-around">
+            <div className="">
+              <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Intertidal</p>
+            </div>
+            <div>
+              <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Marine Invertebrates</p>
+            </div>
+          </div>
+
+          <div className="w-full flex flex-row justify-around">
+            <div className="">
+              <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Organism Lab</p>
+            </div>
+            <div>
+              <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Misc</p>
+            </div>
+          </div>
+        </div>
+          
+          {/*<DunesPage></DunesPage> */}
       </div>
       
     </div>
