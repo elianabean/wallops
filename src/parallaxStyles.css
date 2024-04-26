@@ -1,0 +1,34 @@
+.parallax-outer {
+    overflow: hidden;
+}
+
+.parallax {
+    height: 110vh;
+    width: 100%;
+    position: relative;
+}
+
+.parallax img {
+    position: absolute;
+}
+
+.cloud1 {
+    width: 100%;
+    bottom: 0px
+}
+.cloud2 {
+    width: 100%;
+    bottom: 0px
+}
+.cloud3 {
+    width: 100%;
+    bottom: 0px
+}
+.cloud4 {
+    width: 100%;
+    bottom: 0px
+}
+.cloud5 {
+    width: 100%;
+    bottom: 0px
+}

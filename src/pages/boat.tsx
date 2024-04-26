@@ -19,7 +19,7 @@ const BoatPage = () => {
             }}>
                 <NavBar></NavBar>
                 <div className="h-[50vh] flex flex-col justify-center text-white text-center">
-                    <h2 className="text-8xl font-openSans font-extrabold mb-2">Dunes</h2>
+                    <h2 className="text-8xl font-openSans font-extrabold mb-2">Boat</h2>
                     <div className="w-full flex flex-row justify-center">
                     <Link to="/">
                         <p className="relative group w-fit">
