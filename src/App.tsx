@@ -5,6 +5,7 @@ import IntertidalPage from "./pages/intertidal";
 import MarineInvertPage from "./pages/marineInvert";
 import OrgLabPage from "./pages/orgLab";
 import MiscPage from "./pages/misc";
+import ScrollToTop from "./components/scrollToTop";
 
 import { 
   BrowserRouter as Router, Routes, 
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="h-full">
       <Router>
+        <ScrollToTop></ScrollToTop>
         <Routes>
           <Route path="/">
             <Route index element={<HomePage />} /> 
