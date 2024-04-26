@@ -10,8 +10,8 @@ import {
 
 const DunesPage = () => {
     return (
-        <div>
-            <div className="overflow-x-hidden h-[50vh] w-[100vw] relative bg-center"
+        <div >
+            <div className="overflow-x-hidden h-[50vh] w-[100vw] relative bg-center background"
             style={{ 
                 backgroundImage: `url(${background})`,
                 backgroundSize: 'cover',
@@ -19,7 +19,16 @@ const DunesPage = () => {
                 <NavBar></NavBar>
                 <div className="h-[50vh] flex flex-col justify-center text-white text-center">
                     <h2 className="text-8xl font-openSans font-extrabold mb-2">Dunes</h2>
-                    <Link to="/"><h6 className="text-2xl font-ptSans">Home</h6></Link>
+                    <div className="w-full flex flex-row justify-center">
+                    <Link to="/">
+                        <p className="relative group w-fit">
+                            <span>back</span>
+                            <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
+                            <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
+                        </p>
+                    </Link>
+                    </div>
+                    
                 </div>
             </div>
 
