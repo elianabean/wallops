@@ -1,5 +1,6 @@
 import background from '../assets/background.jpg'
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import DunesPage from "./dunes";
 import peaks from '../assets/peaks.png';
 import { 
@@ -58,9 +59,9 @@ function HomePage() {
             </div>
           </div>
         </div>
-          
-          {/*<DunesPage></DunesPage> */}
       </div>
+
+      <Footer></Footer>
     </div>
   )
 }
