@@ -12,23 +12,42 @@
     position: absolute;
 }
 
+.cloud4 {
+    animation: animateClouds 30s linear infinite;
+}
+.cloud5 {
+    animation: animateClouds 15s linear infinite;
+}
+
+@keyframes animateClouds {
+    0% {
+        transform: translateX(-100%);
+    } 100% {
+        transform: translateX(100%);
+    }
+}
+
 .cloud1 {
     width: 100%;
-    bottom: 0px
+    bottom: 0px;
+    right: 0px;
 }
 .cloud2 {
     width: 100%;
-    bottom: 0px
+    bottom: 0px;
+    right: 0px;
 }
 .cloud3 {
     width: 100%;
-    bottom: 0px
+    bottom: 0px;
+    right: 0px;
 }
 .cloud4 {
     width: 100%;
-    bottom: 0px
+    bottom: 0px;
 }
 .cloud5 {
     width: 100%;
-    bottom: 0px
+    bottom: 0px;
+    left: 0px;
 }

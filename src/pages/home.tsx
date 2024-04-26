@@ -11,6 +11,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import '../parallaxStyles.css';
 
+{/*Cloud images from https://drive.google.com/drive/folders/1jFyS9H1XUmXpZUGMQLuKI8xXANkkR4D_ */}
 import peaks from '../assets/peaks.png';
 import cloud1 from "../assets/cloud1.png";
 import cloud2 from "../assets/cloud2.png";
@@ -33,37 +34,37 @@ function HomePage() {
     let ctx = gsap.context(() => {
         gsap.registerPlugin(ScrollTrigger);
         var tl = gsap.timeline({
-            defaults: { duration: 1 },
-            scrollTrigger: {
-                trigger: parallaxRef.current,
-                start: "top top",
-                end: "1500 bottom",
-                scrub: true,
-                pin: true,
-            },
+          scrollTrigger: {
+            trigger: parallaxRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            pin: true,
+        },
         });
 
         tl.to(
           cloud1Ref.current,
           {
-              x: "-=500",
+              x: "+=400",
           },
           0
         );
         tl.to(
           cloud2Ref.current,
           {
-              x: "-=500",
+              x: "+=600",
           },
           0
         );
         tl.to(
           cloud3Ref.current,
           {
-              x: "-=500",
+              x: "-=300",
           },
           0
         );
+        /*
         tl.to(
           cloud4Ref.current,
           {
@@ -77,7 +78,7 @@ function HomePage() {
               x: "+=500",
           },
           0
-        );
+        );*/
         
     });
     return () => ctx.revert();
@@ -85,22 +86,25 @@ function HomePage() {
 
   return (
     <div className="h-full">
-        <NavBar></NavBar>
+        
         <div className="parallax-outer" >
           <div ref={parallaxRef} className="parallax" style={{ 
-        backgroundImage: `url(${background})`,
-        backgroundSize: 'cover',
-      }}>
-            <img ref={cloud1Ref} className="cloud1 absolute" src={cloud1}></img>
-            <img ref={cloud2Ref} className="cloud2 absolute" src={cloud2}></img>
-            <img ref={cloud3Ref} className="cloud3 absolute" src={cloud3}></img>
-            <img ref={cloud4Ref} className="cloud4 absolute" src={cloud4}></img>
-            <img ref={cloud5Ref} className="cloud5 absolute" src={cloud5}></img>
-          </div>
-        </div>
-        <div className="h-[100vh] flex flex-col justify-center text-white text-center absolute top-0 w-full">
+          backgroundImage: `url(${background})`,
+          backgroundSize: 'cover',
+          }}>
+            <NavBar></NavBar>
+            <div className="clouds">
+              <img ref={cloud1Ref} className="cloud1 absolute" src={cloud1}></img>
+              <img ref={cloud2Ref} className="cloud2 absolute" src={cloud2}></img>
+              <img ref={cloud3Ref} className="cloud3 absolute" src={cloud3}></img>
+              <img ref={cloud4Ref} className="cloud4 absolute" src={cloud4}></img>
+              <img ref={cloud5Ref} className="cloud5 absolute" src={cloud5}></img>
+            </div>
+            <div className="h-[100vh] flex flex-col justify-center text-white text-center fixed top-0 w-full">
           <h2 className="text-8xl font-openSans font-extrabold mb-6">Wallops Island</h2>
           <h6 className="text-2xl font-ptSans">MBHS Class of 2026</h6>
+        </div>
+          </div>
         </div>
 
       <div className="h-full flex flex-col justify-center px-20 mt-10">
