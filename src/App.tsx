@@ -1,8 +1,10 @@
-import background from './assets/background.jpg'
-import NavBar from "./components/NavBar";
 import DunesPage from "./pages/dunes";
-import peaks from './assets/peaks.png';
 import HomePage from "./pages/home";
+import BoatPage from "./pages/boat";
+import IntertidalPage from "./pages/intertidal";
+import MarineInvertPage from "./pages/marineInvert";
+import OrgLabPage from "./pages/orgLab";
+import MiscPage from "./pages/misc";
 
 import { 
   BrowserRouter as Router, Routes, 
@@ -17,6 +19,11 @@ function App() {
           <Route path="/">
             <Route index element={<HomePage />} /> 
             <Route path="dunes" element={<DunesPage />} /> 
+            <Route path="boat" element={<BoatPage />} /> 
+            <Route path="intertidal" element={<IntertidalPage />} /> 
+            <Route path="marineInvert" element={<MarineInvertPage />} /> 
+            <Route path="orgLab" element={<OrgLabPage />} /> 
+            <Route path="misc" element={<MiscPage />} /> 
           </Route>
         </Routes> 
       </Router>

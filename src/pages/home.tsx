@@ -1,12 +1,12 @@
 import background from '../assets/background.jpg'
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import DunesPage from "./dunes";
-import peaks from '../assets/peaks.png';
 import { 
   BrowserRouter as Router, Routes, 
   Route, Link
 } from "react-router-dom"; 
+
+import peaks from '../assets/peaks.png';
 
 function HomePage() {
   return (
@@ -32,29 +32,29 @@ function HomePage() {
                 <p className="font-ptSans w-full text-center mt-3 text-base">Dunes</p>
               </div>
               <div>
-                <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <Link to="/boat"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
                 <p className="font-ptSans w-full text-center mt-3 text-base">Boat</p>
               </div>
           </div>
 
           <div className="w-full flex flex-row justify-around">
             <div className="">
-              <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <Link to="/intertidal"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
               <p className="font-ptSans w-full text-center mt-3 text-base">Intertidal</p>
             </div>
             <div>
-              <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <Link to="/marineInvert"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
               <p className="font-ptSans w-full text-center mt-3 text-base">Marine Invertebrates</p>
             </div>
           </div>
 
           <div className="w-full flex flex-row justify-around">
             <div className="">
-              <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <Link to="/orgLab"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
               <p className="font-ptSans w-full text-center mt-3 text-base">Organism Lab</p>
             </div>
             <div>
-              <img src={peaks} className="w-[36rem] h-[32rem]"></img>
+              <Link to="/misc"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
               <p className="font-ptSans w-full text-center mt-3 text-base">Misc</p>
             </div>
           </div>
