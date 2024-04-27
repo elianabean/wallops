@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import background from './assets/background.jpg'
 import PhotoAlbum from "react-photo-album";
-//import photos from "./photos";
-import NavBar from "./NavBar";
+import { Photo } from './Photo';
+
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -13,12 +12,6 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-
-interface Photo {
-    src: string;
-    width: number;
-    height: number;
-}
 
 interface GalleryProps {
     photos: Photo[];

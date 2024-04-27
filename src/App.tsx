@@ -1,11 +1,14 @@
-import DunesPage from "./pages/dunes";
 import HomePage from "./pages/home";
-import BoatPage from "./pages/boat";
-import IntertidalPage from "./pages/intertidal";
-import MarineInvertPage from "./pages/marineInvert";
-import OrgLabPage from "./pages/orgLab";
-import MiscPage from "./pages/misc";
 import ScrollToTop from "./components/scrollToTop";
+
+import PageTemplate from "./components/pageTemplate";
+import boatPhotos from './components/boatPhotos';
+import dunePhotos from './components/dunePhotos';
+import intertidalPhotos from './components/intertidalPhotos';
+import marineInvertPhotos from './components/marineInvertPhotos';
+import orgLabPhotos from './components/orgLabPhotos';
+import miscPhotos from './components/miscPhotos';
+
 
 import { 
   BrowserRouter as Router, Routes, 
@@ -20,12 +23,12 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<HomePage />} /> 
-            <Route path="dunes" element={<DunesPage />} /> 
-            <Route path="boat" element={<BoatPage />} /> 
-            <Route path="intertidal" element={<IntertidalPage />} /> 
-            <Route path="marineInvert" element={<MarineInvertPage />} /> 
-            <Route path="orgLab" element={<OrgLabPage />} /> 
-            <Route path="misc" element={<MiscPage />} /> 
+            <Route path="dunes" element={<PageTemplate name={"Dunes"} description={"Description"} photosArr={dunePhotos}/>} /> 
+            <Route path="boat" element={<PageTemplate name={"Boat"} description={"Description"} photosArr={boatPhotos}/>} /> 
+            <Route path="intertidal" element={<PageTemplate name={"Intertidal"} description={"Description"} photosArr={intertidalPhotos}/>} /> 
+            <Route path="marineInvert" element={<PageTemplate name={"Marine Invertebrates"} description={"Description"} photosArr={marineInvertPhotos}/>} /> 
+            <Route path="orgLab" element={<PageTemplate name={"Organism Lab"} description={"Description"} photosArr={orgLabPhotos}/>} /> 
+            <Route path="misc" element={<PageTemplate name={"Miscellaneous"} description={"Description"} photosArr={miscPhotos}/>} /> 
           </Route>
         </Routes> 
       </Router>
