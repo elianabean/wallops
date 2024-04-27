@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-spring/parallax": "^9.7.3",
+    "aos": "^3.0.0-beta.6",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,6 +19,7 @@
     "yet-another-react-lightbox": "^3.17.3"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",

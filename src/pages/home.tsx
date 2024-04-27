@@ -8,6 +8,8 @@ import {
 import gsap from 'gsap';
 import {useEffect, useRef, useState} from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import '../parallaxStyles.css';
 
@@ -30,7 +32,13 @@ function HomePage() {
   const cloud4Ref = useRef(null);
   const cloud5Ref = useRef(null);
 
+  
   useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+    
     let ctx = gsap.context(() => {
         gsap.registerPlugin(ScrollTrigger);
         var tl = gsap.timeline({
@@ -64,23 +72,9 @@ function HomePage() {
           },
           0
         );
-        /*
-        tl.to(
-          cloud4Ref.current,
-          {
-              x: "+=500",
-          },
-          0
-        );
-        tl.to(
-          cloud5Ref.current,
-          {
-              x: "+=500",
-          },
-          0
-        );*/
         
     });
+
     return () => ctx.revert();
 }, []);
 
@@ -94,7 +88,7 @@ function HomePage() {
           }}>
             <NavBar></NavBar>
             <div className="clouds">
-              <img ref={cloud1Ref} className="cloud1 absolute" src={cloud1}></img>
+              <img ref={cloud1Ref} className="cloud1 absolute" src={cloud1} ></img>
               <img ref={cloud2Ref} className="cloud2 absolute" src={cloud2}></img>
               <img ref={cloud3Ref} className="cloud3 absolute" src={cloud3}></img>
               <img ref={cloud4Ref} className="cloud4 absolute" src={cloud4}></img>
@@ -108,38 +102,54 @@ function HomePage() {
         </div>
 
       <div className="h-full flex flex-col justify-center px-20 mt-10">
-        <h1 className="w-full text-center font-bold font-openSans mb-10 text-3xl">Activities</h1>
+        <h1 className="w-full text-center font-bold font-openSans mb-10 text-3xl" data-aos="fade-down">Activities</h1>
         <div className="flex flex-col justify-between space-y-8">
           <div className="w-full flex flex-row justify-around">
-              <div className="">
-                <Link to="/dunes"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
-                <p className="font-ptSans w-full text-center mt-3 text-base">Dunes</p>
+            <div data-aos="fade-right">
+              <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden" >
+                  <Link to="/dunes"><img src={peaks} className="w-full h-full hover"></img></Link>
               </div>
-              <div>
-              <Link to="/boat"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
-                <p className="font-ptSans w-full text-center mt-3 text-base">Boat</p>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Dunes</p>
+            </div>
+              
+            <div data-aos="fade-left">
+            <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden" >
+                <Link to="/boat"><img src={peaks} className="w-full h-full hover"></img></Link>
               </div>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Boat</p>
+            </div>
           </div>
 
           <div className="w-full flex flex-row justify-around">
-            <div className="">
-              <Link to="/intertidal"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
+          <div data-aos="fade-right">
+            <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden" >
+                <Link to="/intertidal"><img src={peaks} className="w-full h-full hover"></img></Link>
+              </div>
               <p className="font-ptSans w-full text-center mt-3 text-base">Intertidal</p>
             </div>
-            <div>
-              <Link to="/marineInvert"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
+            <div data-aos="fade-left">
+            <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
+                <Link to="/marineInvert"><img src={peaks} className="w-full h-full hover"></img></Link>
+              </div>
               <p className="font-ptSans w-full text-center mt-3 text-base">Marine Invertebrates</p>
             </div>
           </div>
 
           <div className="w-full flex flex-row justify-around">
-            <div className="">
-              <Link to="/orgLab"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
-              <p className="font-ptSans w-full text-center mt-3 text-base">Organism Lab</p>
+          <div>
+            <div data-aos="fade-right">
+              <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
+                <Link to="/orgLab"><img src={peaks} className="w-full h-full hover"></img></Link>
+              </div>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Organism</p>
             </div>
-            <div>
-              <Link to="/misc"><img src={peaks} className="w-[36rem] h-[32rem]"></img></Link>
-              <p className="font-ptSans w-full text-center mt-3 text-base">Misc</p>
+          </div>
+            
+          <div data-aos="fade-left">
+            <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
+                <Link to="/misc"><img src={peaks} className="w-full h-full hover"></img></Link>
+              </div>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Miscellaneous</p>
             </div>
           </div>
         </div>
