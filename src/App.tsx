@@ -7,6 +7,7 @@ import dunePhotos from './components/dunePhotos';
 import intertidalPhotos from './components/intertidalPhotos';
 import marineInvertPhotos from './components/marineInvertPhotos';
 import orgLabPhotos from './components/orgLabPhotos';
+import sunrisePhotos from './components/sunrisePhotos';
 import miscPhotos from './components/miscPhotos';
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="intertidal" element={<PageTemplate name={"Intertidal"} description={"Description"} photosArr={intertidalPhotos}/>} /> 
             <Route path="marineInvert" element={<PageTemplate name={"Marine Invertebrates"} description={"Description"} photosArr={marineInvertPhotos}/>} /> 
             <Route path="orgLab" element={<PageTemplate name={"Organism Lab"} description={"Description"} photosArr={orgLabPhotos}/>} /> 
+            <Route path="sunrise" element={<PageTemplate name={"Sunrise"} description={"Description"} photosArr={sunrisePhotos}/>} /> 
             <Route path="misc" element={<PageTemplate name={"Miscellaneous"} description={"Description"} photosArr={miscPhotos}/>} /> 
           </Route>
         </Routes> 

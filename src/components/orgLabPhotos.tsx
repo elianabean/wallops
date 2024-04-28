@@ -1,85 +1,80 @@
 /* Source: https://codesandbox.io/p/devbox/romantic-bhaskara-82djq9?file=%2Fsrc%2Fphotos.ts%3A35%2C46-35%2C47*/
 import blahaj from '../assets/peaks.png'
+import orgLab1 from '../assets/orgLab/orgLab1.jpeg';
+import orgLab2 from '../assets/orgLab/orgLab2.jpeg';
+import orgLab3 from '../assets/orgLab/orgLab3.jpeg';
+import orgLab4 from '../assets/orgLab/orgLab4.jpeg';
+import orgLab5 from '../assets/orgLab/orgLab5.jpeg';
+import orgLab6 from '../assets/orgLab/orgLab6.jpeg';
+import orgLab7 from '../assets/orgLab/orgLab7.jpeg';
+import orgLab8 from '../assets/orgLab/orgLab8.jpeg';
+import orgLab9 from '../assets/orgLab/orgLab9.jpeg';
+import orgLab10 from '../assets/orgLab/orgLab10.jpeg';
+import orgLab11 from '../assets/orgLab/orgLab11.jpeg';
+import orgLab12 from '../assets/orgLab/orgLab12.jpeg';
 
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
 const photosArr = [
   {
-    src: `${blahaj}`,
-    title: 'Blahaj One',
-    description: 'Slide Description One\n\nthis is new line',
-    width: 3000,
-    height: 800,
+    src: `${orgLab4}`,
+    width: 3024,
+    height: 4032,
   },
   {
-      src: `${blahaj}`,
-    title: 'Blahaj Two',
-    description: 'Nom nom nom nom',
-    width: 1080,
-    height: 1620,
+      src: `${orgLab2}`,
+    width: 3024,
+    height: 4032,
   },
   {
-      src: `${blahaj}`,
-      title: 'Blahaj Three',
-      description: 'Nom nom nom nom',
-    width: 1080,
-    height: 720,
+      src: `${orgLab3}`,
+    width: 3024,
+    height: 4032,
   },
   {
-    src: `${blahaj}`,
-    title: 'Blahaj Four',
-    description: 'Nom nom nom nom',
-    width: 1080,
-    height: 721,
+    src: `${orgLab1}`,
+    width: 4284,
+    height: 5712,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Five',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 1620,
+  src: `${orgLab5}`,
+  width: 3024,
+  height: 4032,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 607,
+  src: `${orgLab6}`,
+  width: 3024,
+  height: 4032,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 608,
+  src: `${orgLab7}`,
+  width: 3024,
+  height: 4032,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 720,
+  src: `${orgLab8}`,
+  width: 3024,
+  height: 4032,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 1549,
+  src: `${orgLab9}`,
+  width: 3024,
+  height: 4032,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 720,
+  src: `${orgLab10}`,
+  width: 3024,
+  height: 4032,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 694,
+  src: `${orgLab11}`,
+  width: 3024,
+  height: 4032,
+},
+{
+  src: `${orgLab12}`,
+  width: 1536,
+  height: 2048,
 },
 ]
 

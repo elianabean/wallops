@@ -23,7 +23,7 @@ const Gallery: React.FC<GalleryProps> = ({ photos }) => {
     return (
         <div>
             <PhotoAlbum photos={photos} layout="rows" padding={0}
-          targetRowHeight={300} onClick={({ index }) => setIndex(index)} />
+          targetRowHeight={400} onClick={({ index }) => setIndex(index)} />
 
           <Lightbox
           slides={photos}

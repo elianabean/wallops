@@ -136,20 +136,31 @@ function HomePage() {
           </div>
 
           <div className="w-full flex flex-row justify-around">
-          <div>
-            <div data-aos="fade-right">
-              <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
-                <Link to="/orgLab"><img src={peaks} className="w-full h-full hover"></img></Link>
+            <div>
+              <div data-aos="fade-right">
+                <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
+                  <Link to="/orgLab"><img src={peaks} className="w-full h-full hover"></img></Link>
+                </div>
+                <p className="font-ptSans w-full text-center mt-3 text-base">Organism Lab</p>
               </div>
-              <p className="font-ptSans w-full text-center mt-3 text-base">Organism</p>
+            </div>
+            
+            <div data-aos="fade-left">
+              <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
+                <Link to="/sunrise"><img src={peaks} className="w-full h-full hover"></img></Link>
+              </div>
+              <p className="font-ptSans w-full text-center mt-3 text-base">Sunrise</p>
             </div>
           </div>
-            
-          <div data-aos="fade-left">
-            <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
-                <Link to="/misc"><img src={peaks} className="w-full h-full hover"></img></Link>
+          
+          <div className="w-full flex flex-row justify-around">
+            <div>
+              <div data-aos="fade-right">
+                <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
+                  <Link to="/misc"><img src={peaks} className="w-full h-full hover"></img></Link>
+                </div>
+                <p className="font-ptSans w-full text-center mt-3 text-base">Miscellaneous</p>
               </div>
-              <p className="font-ptSans w-full text-center mt-3 text-base">Miscellaneous</p>
             </div>
           </div>
         </div>

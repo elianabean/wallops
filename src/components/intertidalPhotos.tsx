@@ -1,85 +1,44 @@
 /* Source: https://codesandbox.io/p/devbox/romantic-bhaskara-82djq9?file=%2Fsrc%2Fphotos.ts%3A35%2C46-35%2C47*/
 import blahaj from '../assets/peaks.png'
+import intertidal1 from '../assets/intertidal/intertidal1.jpeg';
+import intertidal2 from '../assets/intertidal/intertidal2.jpeg';
+import intertidal3 from '../assets/intertidal/intertidal3.jpeg';
+import intertidal4 from '../assets/intertidal/intertidal4.jpeg';
+import intertidal5 from '../assets/intertidal/intertidal5.jpeg';
+import intertidal6 from '../assets/intertidal/intertidal6.jpeg';
 
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
 const photosArr = [
   {
-    src: `${blahaj}`,
-    title: 'Blahaj One',
-    description: 'Slide Description One\n\nthis is new line',
-    width: 3000,
-    height: 800,
+    src: `${intertidal1}`,
+    width: 4284,
+    height: 5712,
   },
   {
-      src: `${blahaj}`,
-    title: 'Blahaj Two',
-    description: 'Nom nom nom nom',
-    width: 1080,
-    height: 1620,
+      src: `${intertidal2}`,
+    width: 3024,
+    height: 4032,
   },
   {
-      src: `${blahaj}`,
-      title: 'Blahaj Three',
-      description: 'Nom nom nom nom',
-    width: 1080,
-    height: 720,
+      src: `${intertidal3}`,
+    width: 3024,
+    height: 4032,
   },
   {
-    src: `${blahaj}`,
-    title: 'Blahaj Four',
-    description: 'Nom nom nom nom',
-    width: 1080,
-    height: 721,
+    src: `${intertidal4}`,
+    width: 3024,
+    height: 4032,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Five',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 1620,
+  src: `${intertidal5}`,
+  width: 4032,
+  height: 3024,
 },
 {
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 607,
-},
-{
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 608,
-},
-{
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 720,
-},
-{
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 1549,
-},
-{
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 720,
-},
-{
-  src: `${blahaj}`,
-  title: 'Blahaj Six',
-  description: 'Nom nom nom nom',
-  width: 1080,
-  height: 694,
+  src: `${intertidal6}`,
+  width: 3024,
+  height: 4032,
 },
 ]
 
