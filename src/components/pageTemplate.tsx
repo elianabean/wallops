@@ -34,7 +34,7 @@ function PageTemplate({ name, description, photosArr }: {name: string; descripti
             </div>
 
             <div className="mt-10 mx-32">
-                <h1 className="w-full text-center px-80 mb-10 font-ptSans">{description}</h1>
+                <h1 className="w-full text-center px-80 mb-10 font-ptSans whitespace-pre-wrap">{description}</h1>
                 <Gallery photos={photosArr} />
             </div>
             

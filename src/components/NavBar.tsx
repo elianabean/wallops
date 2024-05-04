@@ -28,7 +28,7 @@ function NavBar() {
           </li>
           <li>
 
-            <Link to="/">
+            <a href="https://github.com/elianabean/">
             <div className="leading-none block md:border-0 md:p-0 text-white ">
                 <p className="relative group">
                     <span>contact</span>
@@ -36,7 +36,7 @@ function NavBar() {
                     <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white group-hover:w-1/2 group-hover:transition-all duration-200 mt-0.5"></span>
                 </p>
             </div>
-            </Link>
+            </a>
           </li>          
         </ul>
       </div>

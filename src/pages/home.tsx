@@ -10,11 +10,17 @@ import {useEffect, useRef, useState} from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import dunes from "../assets/dunes/dunes1.jpeg";
+import boat from "../assets/boat/boat7.jpeg";
+import intertidal from "../assets/intertidal/intertidal2.jpeg";
+import marineInvert from "../assets/marineInvert/marineInvert1.jpeg";
+import orgLab from "../assets/orgLab/orgLab2.jpeg";
+import sunrise from "../assets/sunrise/sunrise1.jpeg";
+import misc from "../assets/miscFolder/misc1.jpeg";
 
 import '../parallaxStyles.css';
 
 {/*Cloud images from https://drive.google.com/drive/folders/1jFyS9H1XUmXpZUGMQLuKI8xXANkkR4D_ */}
-import peaks from '../assets/peaks.png';
 import cloud1 from "../assets/cloud1.png";
 import cloud2 from "../assets/cloud2.png";
 import cloud3 from "../assets/cloud3.png";
@@ -107,14 +113,14 @@ function HomePage() {
           <div className="w-full flex flex-row justify-around">
             <div data-aos="fade-right">
               <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden" >
-                  <Link to="/dunes"><img src={peaks} className="w-full h-full hover"></img></Link>
+                  <Link to="/dunes"><img src={dunes} className="w-full h-full hover"></img></Link>
               </div>
               <p className="font-ptSans w-full text-center mt-3 text-base">Dunes</p>
             </div>
               
             <div data-aos="fade-left">
             <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden" >
-                <Link to="/boat"><img src={peaks} className="w-full h-full hover"></img></Link>
+                <Link to="/boat"><img src={boat} className="w-full h-full hover"></img></Link>
               </div>
               <p className="font-ptSans w-full text-center mt-3 text-base">Boat</p>
             </div>
@@ -123,13 +129,13 @@ function HomePage() {
           <div className="w-full flex flex-row justify-around">
           <div data-aos="fade-right">
             <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden" >
-                <Link to="/intertidal"><img src={peaks} className="w-full h-full hover"></img></Link>
+                <Link to="/intertidal"><img src={intertidal} className="w-full h-full hover"></img></Link>
               </div>
               <p className="font-ptSans w-full text-center mt-3 text-base">Intertidal</p>
             </div>
             <div data-aos="fade-left">
             <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
-                <Link to="/marineInvert"><img src={peaks} className="w-full h-full hover"></img></Link>
+                <Link to="/marineInvert"><img src={marineInvert} className="w-full h-full hover"></img></Link>
               </div>
               <p className="font-ptSans w-full text-center mt-3 text-base">Marine Invertebrates</p>
             </div>
@@ -139,7 +145,7 @@ function HomePage() {
             <div>
               <div data-aos="fade-right">
                 <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
-                  <Link to="/orgLab"><img src={peaks} className="w-full h-full hover"></img></Link>
+                  <Link to="/orgLab"><img src={orgLab} className="w-full h-full hover"></img></Link>
                 </div>
                 <p className="font-ptSans w-full text-center mt-3 text-base">Organism Lab</p>
               </div>
@@ -147,7 +153,7 @@ function HomePage() {
             
             <div data-aos="fade-left">
               <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
-                <Link to="/sunrise"><img src={peaks} className="w-full h-full hover"></img></Link>
+                <Link to="/sunrise"><img src={sunrise} className="w-full h-full hover"></img></Link>
               </div>
               <p className="font-ptSans w-full text-center mt-3 text-base">Sunrise</p>
             </div>
@@ -157,7 +163,7 @@ function HomePage() {
             <div>
               <div data-aos="fade-right">
                 <div className="w-[36rem] h-[32rem] rounded-2xl overflow-hidden">
-                  <Link to="/misc"><img src={peaks} className="w-full h-full hover"></img></Link>
+                  <Link to="/misc"><img src={misc} className="w-full h-full hover"></img></Link>
                 </div>
                 <p className="font-ptSans w-full text-center mt-3 text-base">Miscellaneous</p>
               </div>
